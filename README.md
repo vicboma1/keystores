@@ -16,4 +16,13 @@ Import an existing x509 certificate and private key in java keystore to PKCS12
 
 3 - keytool.exe -list -v -keystore application.keystore -storepass YYYYY  | grep -B 3 "PrivateKeyEntry\|SecretKeyEntry"
 
+
+List cacerts
+
+1 - keytool -list -v -keystore cacerts.jks
+
+Create cacerts
+
+1 - keytool.exe -import -v -trustcacerts -alias server -file file.cer -keystore cacerts.jks -keypass changeit -storepass changeit
+
 ```
